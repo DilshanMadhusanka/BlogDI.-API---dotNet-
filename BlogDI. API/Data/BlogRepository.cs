@@ -2,13 +2,13 @@
 
 namespace BlogDI._API.Data
 {
-    public class BlogRepository
+    public class BlogRepository : IBlogRepository
     {
         // create a blog list ( this is our data set now => because stil we donot have data base )
 
-        public static List<Blog> blogs = new List<Blog>() 
+        public static List<Blog> blogs = new List<Blog>()
         {
-            new Blog(){ Id = 1 ,Content ="this is five episodes", 
+            new Blog(){ Id = 1 ,Content ="this is five episodes",
                 Title =" time newroman  " },
 
             new Blog(){ Id = 2 ,Content ="nine episodes",
@@ -19,8 +19,8 @@ namespace BlogDI._API.Data
         };
 
 
-        public List<Blog> getAllBlogs() 
-        { 
+        public List<Blog> getAllBlogs()
+        {
             return blogs;
         }
     }

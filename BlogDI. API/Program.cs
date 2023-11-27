@@ -1,6 +1,14 @@
+using BlogDI._API.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+
+
+// adding my dependancies
+
+builder.Services.AddTransient<IBlogRepository , BlogRepository>(); // response eke errors awoth me deka danna
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

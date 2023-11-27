@@ -10,15 +10,23 @@ namespace BlogDI._API.Controllers
     [ApiController]
     public class BlogsController : ControllerBase
     {
+        private readonly IBlogRepository _repository; // me kotasa auto enawa, constructor eka 
+        // create kral parameters dila, ctrl + . gahala ena eken select karal dunnam 
+        public BlogsController(IBlogRepository repository)
+        {
+            _repository = repository;
+        }
+
         // data ganne mona location ekend kiyann oni 
 
-        BlogRepository  repository = new BlogRepository();
+       // BlogRepository  repository = new BlogRepository();  // create a new repository. constructor eken hadnwa nam meka oni na 
+        
 
         // GET: api/<BlogsController>
         [HttpGet]
         public ActionResult<IEnumerable<Blog>> Get()
         {
-            var blogs = repository.getAllBlogs();
+            var blogs = _repository.getAllBlogs();
             return Ok(blogs);
         }
 
