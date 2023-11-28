@@ -19,7 +19,7 @@ namespace BlogDI._API.Data
         };
 
 
-        public List<Blog> getAllBlogs()
+        public List<Blog> getAllBlogs() // creat a list of blog
         {
             return blogs;
         }
