@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // adding my dependancies
 
-builder.Services.AddTransient<IBlogRepository , BlogRepository>(); // response eke errors awoth me deka danna
+builder.Services.AddTransient<IBlogRepository , NewBlogRepository>(); // response eke errors awoth me deka danna
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
