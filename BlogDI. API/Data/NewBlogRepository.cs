@@ -2,7 +2,7 @@
 
 namespace BlogDI._API.Data
 {
-    public class NewBlogRepository :IBlogRepository
+    public class NewBlogRepository :IBlogRepository  // this is inherited 
     {
         public static List<Blog> blogs = new List<Blog>()
         {
